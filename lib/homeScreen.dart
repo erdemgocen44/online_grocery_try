@@ -76,9 +76,61 @@ class _HomeScreenState extends State<HomeScreen> {
                   Icon(Icons.mic),
                 ],
               ),
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                buildContainerMap("assets/images/harita1.png", 'Home Address',
+                    "Oxford St. No:2\nStreet x12"),
+                buildContainerMap("assets/images/harita2.png", 'Office Address',
+                    "Eye St. No:2456\nStreet x12"),
+              ],
+            ),
           ],
         ),
+      ),
+    );
+  }
+
+  Container buildContainerMap(String resim, String adres, String sokak) {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.4,
+      height: MediaQuery.of(context).size.height * 0.07,
+      decoration: BoxDecoration(
+        border: Border.all(color: Color(0xff707070)),
+        color: Colors.white,
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset(resim),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                adres,
+                style: buildTextStyle(
+                  11,
+                  Color(0xff474749),
+                  FontWeight.bold,
+                ),
+              ),
+              Text(
+                sokak,
+                style: buildTextStyle(
+                  9,
+                  Color(0xff474749),
+                  FontWeight.w400,
+                ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
