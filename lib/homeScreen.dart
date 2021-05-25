@@ -87,9 +87,80 @@ class _HomeScreenState extends State<HomeScreen> {
                     "Eye St. No:2456\nStreet x12"),
               ],
             ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Explore by Category',
+                      style: buildTextStyle(
+                        11,
+                        Color(0xff474749),
+                        FontWeight.bold,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'See All (36)',
+                        style: buildTextStyle(
+                          9,
+                          Color(0xff929294),
+                          FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      buildColumnCard("assets/images/biftek.png", 'Steak'),
+                      buildColumnCard("assets/images/fish.png", 'Fish'),
+                      buildColumnCard(
+                          "assets/images/beverage.png", 'Beverages'),
+                      buildColumnCard(
+                          "assets/images/vegetables.png", 'Vegetables'),
+                      buildColumnCard("assets/images/wine.png", 'Wine'),
+                      buildColumnCard("assets/images/biftek.png", 'Steak'),
+                      buildColumnCard("assets/images/fish.png", 'Fish'),
+                      buildColumnCard(
+                          "assets/images/beverage.png", 'Beverages'),
+                      buildColumnCard(
+                          "assets/images/vegetables.png", 'Vegetables'),
+                      buildColumnCard("assets/images/wine.png", 'Wine'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  Column buildColumnCard(String resim, String baslik) {
+    return Column(
+      children: [
+        Card(
+          elevation: 0,
+          child: Image.asset(resim),
+        ),
+        Text(
+          baslik,
+          style: buildTextStyle(
+            10,
+            Color(0xff474749),
+            FontWeight.w400,
+          ),
+        ),
+      ],
     );
   }
 
