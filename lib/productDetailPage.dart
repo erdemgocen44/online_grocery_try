@@ -30,7 +30,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
         child: Column(
           children: [
             Stack(
-              clipBehavior: Clip.hardEdge,
+              clipBehavior: Clip.none,
               fit: StackFit.loose,
               children: [
                 Container(
