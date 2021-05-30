@@ -12,8 +12,9 @@ class _MenuPageState extends State<MenuPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Container(
               height: MediaQuery.of(context).size.height * 0.08,
@@ -155,6 +156,98 @@ class _MenuPageState extends State<MenuPage> {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 15.0,
+                bottom: 10,
+              ),
+              child: buildDefaultText(
+                'Deals of the day',
+                15,
+                FontWeight.bold,
+                Colors.black,
+              ),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                children: [
+                  buildEnAltWidget("assets/images/beve.png",
+                      'Cola Coca\nPieces 12', '£ 12 '),
+                  buildEnAltWidget("assets/images/iceCream2.png",
+                      'Summer Sun Ice Cream Pack', '£ 14 '),
+                  buildEnAltWidget("assets/images/beve.png",
+                      'Cola Coca\nPieces 12', '£ 12 '),
+                  buildEnAltWidget("assets/images/iceCream2.png",
+                      'Summer Sun Ice Cream Pack', '£ 14 '),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding buildEnAltWidget(String resim, String isim, String fiyat) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15.0, top: 10, bottom: 10),
+      child: Container(
+        child: Row(
+          children: [
+            Image.asset(resim),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                buildDefaultText(
+                  isim,
+                  10,
+                  FontWeight.w400,
+                  Colors.black,
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.location_city,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                    buildDefaultText(
+                      '9 Minutes Away',
+                      10,
+                      FontWeight.w400,
+                      Colors.black,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    buildDefaultText(
+                      fiyat,
+                      13,
+                      FontWeight.bold,
+                      Color(
+                        0xffEE6A61,
+                      ),
+                    ),
+                    buildDefaultText(
+                      ' £ 19',
+                      13,
+                      FontWeight.bold,
+                      Color(
+                        0xff707070,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
@@ -179,7 +272,11 @@ class _MenuPageState extends State<MenuPage> {
       fit: StackFit.loose,
       children: [
         Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.only(
+            top: 15.0,
+            left: 15,
+            right: 25,
+          ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
