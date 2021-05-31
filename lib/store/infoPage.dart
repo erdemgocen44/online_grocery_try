@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_grocery_try/defaultText.dart';
+import 'package:online_grocery_try/store/paymentMethod.dart';
 
 class InfoPage extends StatefulWidget {
   @override
@@ -216,7 +217,14 @@ class _InfoPageState extends State<InfoPage> {
                       ),
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PaymentMethodPage(),
+                          ),
+                        );
+                      },
                       child: buildDefaultText(
                         'ORDER NOW',
                         17,

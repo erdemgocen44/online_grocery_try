@@ -61,7 +61,9 @@ class _StorePageState extends State<StorePage>
                 pinned: true,
                 floating: true,
                 flexibleSpace: FlexibleSpaceBar(
-                  background: Image.network('https://picsum.photos/500/200'),
+                  background: Image.asset(
+                    'assets/images/dinner.jpg',
+                  ),
                   centerTitle: false,
                 ),
                 backgroundColor: Colors.grey[100],
