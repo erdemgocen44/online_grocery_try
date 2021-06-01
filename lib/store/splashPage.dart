@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_grocery_try/deals/dealsOfDayPage.dart';
+import 'package:online_grocery_try/deals/cardView.dart';
 import 'package:online_grocery_try/defaultText.dart';
 
 class SplashPage extends StatefulWidget {
@@ -29,7 +29,7 @@ class _SplashPageState extends State<SplashPage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DealsOfDayPage(),
+                      builder: (context) => CardView(),
                     ),
                   );
                 },

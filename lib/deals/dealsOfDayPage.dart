@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_grocery_try/deals/cardView.dart';
 
 class DealsOfDayPage extends StatefulWidget {
   @override
@@ -9,7 +10,11 @@ class _DealsOfDayPageState extends State<DealsOfDayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.pink,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [],
+      ),
     );
   }
 }
