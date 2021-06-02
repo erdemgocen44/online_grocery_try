@@ -66,7 +66,7 @@ class _StorePageState extends State<StorePage>
                   ),
                   centerTitle: false,
                 ),
-                backgroundColor: Colors.grey[100],
+                backgroundColor: Colors.red,
                 elevation: 12.0,
                 bottom: TabBar(
                   controller: _controller,

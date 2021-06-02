@@ -104,11 +104,11 @@ class _SingInPageState extends State<SingInPage> {
                         decoration: BoxDecoration(
                           color: Color(0xffFD8700),
                           borderRadius: BorderRadius.all(
-                            Radius.circular(30),
+                            Radius.circular(20),
                           ),
                         ),
                         width: MediaQuery.of(context).size.width * 0.9,
-                        height: MediaQuery.of(context).size.height * 0.1,
+                        height: MediaQuery.of(context).size.height * 0.085,
                         child: TextButton(
                           onPressed: () {
                             Navigator.push(
